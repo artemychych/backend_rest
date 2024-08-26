@@ -1,0 +1,49 @@
+### 
+
+POST http://127.0.0.1:8000/auth/signup 
+Content-Type: application/json
+
+{ "username": "adam7", "password": "Pass1234!", "email": "adam@mail.com" }
+
+### 
+
+
+POST http://127.0.0.1:8000/auth/login 
+Content-Type: application/json
+
+{ "username": "user2", "password": "password" }
+
+###
+
+GET http://127.0.0.1:8000/auth/test_token 
+Content-Type: application/json
+Authorization: Token 5aa52c516206386fc78c822e7979cb0517df7b04
+
+###
+
+POST http://127.0.0.1:8000/auth/signup_companies
+Content-Type: application/json
+
+{ "username": "company2", "password": "Pass1234!", "email": "adam@mail.com" }
+
+###
+
+POST http://127.0.0.1:8000/auth/update_skills
+Content-Type: application/json
+Authorization: Token 5aa52c516206386fc78c822e7979cb0517df7b04
+
+{ 
+    "skills": [
+        {
+            "skill": 
+        }, 
+    ]
+
+}
+
+
+###
+
+GET http://127.0.0.1:8000/auth/get_users_test_details/7413
+Content-Type: application/json
+Authorization: Token 508a36d745e29ef9dce7c60eaeb5dd2cb2a388c8
